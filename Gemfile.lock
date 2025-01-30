@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniai-deepseek (0.1.0)
+    omniai-deepseek (0.1.1)
       event_stream_parser
       omniai
       zeitwerk
