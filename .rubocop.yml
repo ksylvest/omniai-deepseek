@@ -1,0 +1,23 @@
+inherit_gem:
+  rubocop-basic: rubocop.yml
+
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/SpecFilePathFormat:
+  CustomTransform:
+    OmniAI: omniai
+    DeepSeek: deepseek
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
