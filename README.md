@@ -61,7 +61,7 @@ completion.content # 'The capital of Canada is Ottawa.'
 
 #### Model
 
-`model` takes an optional string (default is `gpt-4o`):
+`model` takes an optional string (default is `deepseek-chat`):
 
 ```ruby
 completion = client.chat('How fast is a cheetah?', model: OmniAI::DeepSeek::Chat::Model::REASONER)
