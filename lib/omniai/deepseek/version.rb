@@ -2,6 +2,6 @@
 
 module OmniAI
   module DeepSeek
-    VERSION = "0.1.1"
+    VERSION = "1.9.0"
   end
 end

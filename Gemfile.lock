@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    omniai-deepseek (0.1.1)
+    omniai-deepseek (1.9.0)
       event_stream_parser
-      omniai
+      omniai (~> 1.9)
       zeitwerk
 
 GEM
