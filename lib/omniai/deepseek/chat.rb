@@ -28,7 +28,7 @@ module OmniAI
         OmniAI::DeepSeek.config.chat_options.merge({
           messages: @prompt.serialize,
           model: @model,
-          stream: @stream.nil? ? nil : !@stream.nil?,
+          stream: stream? || nil,
           temperature: @temperature,
           response_format: (JSON_RESPONSE_FORMAT if @format.eql?(:json)),
           tools: (@tools.map(&:serialize) if @tools&.any?),
