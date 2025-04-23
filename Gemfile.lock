@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniai-deepseek (2.2.0)
+    omniai-deepseek (2.2.1)
       event_stream_parser
       omniai (~> 2.2)
       zeitwerk
@@ -80,6 +80,7 @@ GEM
     rake (13.2.1)
     rdoc (6.13.1)
       psych (>= 4.0.0)
+    redcarpet (3.6.1)
     regexp_parser (2.10.0)
     reline (0.6.0)
       io-console (~> 0.5)
@@ -156,6 +157,7 @@ DEPENDENCIES
   logger
   omniai-deepseek!
   rake
+  redcarpet
   rspec
   rspec_junit_formatter
   rubocop
