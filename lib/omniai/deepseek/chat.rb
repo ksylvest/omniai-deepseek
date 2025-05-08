@@ -12,7 +12,11 @@ module OmniAI
     #   end
     #   completion.choice.message.content # '...'
     class Chat < OmniAI::Chat
-      JSON_RESPONSE_FORMAT = { type: "json_object" }.freeze
+      module ResponseFormat
+        TEXT_TYPE = "text"
+        JSON_TYPE = "json_object"
+        SCHEMA_TYPE = "json_schema"
+      end
 
       module Model
         CHAT = "deepseek-chat"
@@ -30,7 +34,7 @@ module OmniAI
           model: @model,
           stream: stream? || nil,
           temperature: @temperature,
-          response_format: (JSON_RESPONSE_FORMAT if @format.eql?(:json)),
+          response_format:,
           tools: (@tools.map(&:serialize) if @tools&.any?),
         }).compact
       end
@@ -38,6 +42,20 @@ module OmniAI
       # @return [String]
       def path
         "/chat/completions"
+      end
+
+      # @raise [ArgumentError]
+      #
+      # @return [Hash, nil]
+      def response_format
+        return if @format.nil?
+
+        case @format
+        when :text then { type: ResponseFormat::TEXT_TYPE }
+        when :json then { type: ResponseFormat::JSON_TYPE }
+        when OmniAI::Schema::Format then { type: ResponseFormat::SCHEMA_TYPE, json_schema: @format.serialize }
+        else raise ArgumentError, "unknown format=#{@format}"
+        end
       end
     end
   end
