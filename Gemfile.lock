@@ -58,7 +58,7 @@ GEM
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
     logger (1.7.0)
-    omniai (2.6.0)
+    omniai (2.8.0)
       event_stream_parser
       http
       logger
@@ -74,7 +74,7 @@ GEM
     psych (5.2.3)
       date
       stringio
-    public_suffix (6.0.1)
+    public_suffix (6.0.2)
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.2.1)
