@@ -23,7 +23,7 @@ GEM
     erb (6.0.4)
     event_stream_parser (1.0.0)
     hashdiff (1.2.1)
-    http (6.0.3)
+    http (6.0.4)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
     http-cookie (1.1.6)
@@ -37,9 +37,9 @@ GEM
     json (2.19.9)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
-    llhttp (0.6.1)
+    llhttp (0.6.2)
     logger (1.7.0)
-    omniai (3.7.1)
+    omniai (3.8.0)
       base64
       event_stream_parser
       http (>= 5, < 7)
